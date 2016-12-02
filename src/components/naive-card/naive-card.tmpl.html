@@ -1,0 +1,18 @@
+<div class="naive-card">
+    <div class="naive-card-container">
+        <figure>
+            <img class="card-img-top img-responsive" ng-src="{{$ctrl.data.cover}}" alt="Book cover">
+            <figcaption>
+                    <span class="title">{{::$ctrl.data.title}}</span>
+                    <span class="subtitle">{{::$ctrl.data.subtitle}}</span>
+                    <div>
+                    <span class="footer-left">{{::$ctrl.data.footer-left}}</span>
+                    <span class="footer-right">{{::$ctrl.data.footer-right}}></span>
+                    </div>
+
+                <a ui-sref="details({bookId: $ctrl.book.id})">Take a look</a>
+
+            </figcaption>
+        </figure>
+    </div>
+</div>

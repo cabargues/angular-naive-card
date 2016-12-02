@@ -1,0 +1,29 @@
+{
+  "name": "angular-naive-card",
+  "version": "0.0.1",
+  "description": "Super simple angular component to show data in a card",
+  "authors": [
+    "cabargues <carlos.abargues@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://www.github.com/cabargues/angular-naive-card",
+  "main": "./dist/angular-naive-card.js",
+  "repository": {
+    "type": "git",
+    "url": "https://www.github.com/cabargues/angular-naive-card.git"
+  },
+  "keywords": [
+    "angular",
+    "card"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular": "^1.5.0"
+  }
+}

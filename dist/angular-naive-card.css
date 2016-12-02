@@ -1,0 +1,102 @@
+.naive-card {
+  max-width: 100%;
+  text-align: center;
+  margin: 5px; }
+
+.naive-card .naive-card-container {
+  display: inline-block;
+  width: auto;
+  margin: 0;
+  text-align: left;
+  position: relative; }
+
+.naive-card figure {
+  margin: 0;
+  position: relative;
+  overflow: hidden; }
+
+.naive-card figure img {
+  max-width: 100%;
+  display: block;
+  position: relative;
+  -webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
+  -moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s;
+  transition: transform 0.4s, opacity 0.1s 0.3s; }
+
+.naive-card figcaption {
+  position: absolute;
+  left: 0;
+  padding: 20px;
+  background: #212121;
+  color: #212121;
+  height: 150px;
+  width: 100%;
+  top: auto;
+  bottom: 0;
+  opacity: 0;
+  -webkit-transform: translateY(100%);
+  -moz-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  transform: translateY(100%);
+  -webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
+  -moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s;
+  transition: transform 0.4s, opacity 0.1s 0.3s; }
+
+.naive-card figcaption .title {
+  display: block;
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-size: 1.5rem; }
+
+.naive-card figcaption .subtitle {
+  color: #212121;
+  display: block; }
+
+.naive-card figcaption .footer-left {
+  display: inline-block;
+  position: absolute;
+  left: 20px; }
+  .naive-card figcaption .footer-left .icon {
+    color: #b65d69; }
+
+.naive-card figcaption .footer-right {
+  display: inline-block;
+  position: absolute;
+  right: 20px; }
+
+.naive-card figcaption a {
+  text-align: center;
+  padding: 5px 10px;
+  display: inline-block;
+  background: #2ab8cb;
+  color: white;
+  position: absolute;
+  bottom: 20px;
+  right: 20px; }
+
+.no-touch .naive-card figure:hover img,
+.naive-card figure.cs-hover img {
+  -webkit-transform: translateY(-150px);
+  -moz-transform: translateY(-150px);
+  -ms-transform: translateY(-150px);
+  transform: translateY(-150px); }
+
+.no-touch .naive-card figure:hover figcaption,
+.naive-card figure.cs-hover figcaption {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  transform: translateY(0px);
+  -webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
+  -moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s;
+  transition: transform 0.4s, opacity 0.1s 0.3s; }
+
+.naive-card .pull-content-right {
+  position: absolute;
+  right: 20px; }
+
+.naive-card .pull-content-left {
+  position: absolute;
+  left: 20px; }

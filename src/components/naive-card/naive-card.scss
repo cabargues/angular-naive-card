@@ -1,0 +1,188 @@
+// Contains all the styling for naive-card component
+
+
+// Container
+$naive-card-max-width: 100% !default;
+$naive-card-margins: 5px !default;
+$naive-card-container-margin: 0 !default;
+$naive-card-figure-max-width: 100% !default;
+
+// Text container
+$naive-card-caption-left: 0 !default;
+$naive-card-caption-bottom: 0 !default;
+$naive-card-caption-padding: 20px !default;
+$naive-card-caption-height: 150px !default;
+$naive-card-caption-background: hsl(0, 0%, 13%) !default;
+$naive-card-caption-color: hsl(0, 0%, 13%) !default;;
+$naive-card-caption-opacity: 0 !default;
+
+// Title
+$naive-card-title-margin: 0 !default;
+$naive-card-title-padding: 0 !default;
+$naive-card-title-color: hsl(0, 0%, 100%) !default;
+
+// Author
+$naive-card-subtitle-color: hsl(0, 0%, 13%) !default;
+
+// footer-left
+$naive-card-footer-left-left: 20px !default;
+$naive-card-footer-left-icon-color: hsl(352, 38%, 54%) !default;
+
+// Published
+$naive-card-footer-right-right: 20px !default;
+
+// Button
+$naive-card-a-padding: 5px 10px !default;
+$naive-card-a-background: hsl(187, 66%, 48%) !default;
+$naive-card-a-color: hsl(0, 0%, 100%) !default;
+$naive-card-a-bottom: 20px !default;
+$naive-card-a-right: 20px !default;
+
+// Transitions
+$naive-card-transition-transform-time: 0.4s !default;
+$naive-card-transition-opacity-time: 0.1s !default;
+$naive-card-transition-opacity-delay: 0.3s !default;
+
+// Mixins
+@mixin transform($transforms) {
+  -webkit-transform: $transforms;
+  -moz-transform: $transforms;
+  -ms-transform: $transforms;
+  transform: $transforms;
+}
+
+@mixin transition($val: 0.4s) {
+  -webkit-transition: $val;
+  -moz-transition: $val;
+  -o-transition: $val;
+  -ms-transition: $val;
+  transition: $val;
+}
+
+@mixin transition-transform($transform-val: 0.4s, $opacitiy-time: 0.1s, $opacity-delay: 0.3s) {
+  @if $opacitiy-time {
+    @if $opacity-delay {
+      -webkit-transition: -webkit-transform $transform-val, opacity $opacitiy-time $opacity-delay;
+      -moz-transition: -moz-transform $transform-val, opacity $opacitiy-time $opacity-delay;
+      transition: transform $transform-val, opacity $opacitiy-time $opacity-delay;
+    } @else {
+      -webkit-transition: -webkit-transform $transform-val, opacity $opacitiy-time;
+      -moz-transition: -moz-transform $transform-val, opacity $opacitiy-time;
+      transition: transform $transform-val, opacity $opacitiy-time;
+    }
+
+  } @else {
+    -webkit-transition: -webkit-transform $transform-val;
+    -moz-transition: -moz-transform $transform-val;
+    transition: transform $transform-val;
+  }
+
+}
+
+.naive-card {
+  max-width: $naive-card-max-width;
+  text-align: center;
+  margin: $naive-card-margins;
+}
+
+.naive-card .naive-card-container {
+  display: inline-block;
+  width: auto;
+  margin: $naive-card-container-margin;
+  text-align: left;
+  position: relative;
+}
+
+.naive-card figure {
+  margin: $naive-card-container-margin;
+  position: relative;
+  overflow: hidden;
+}
+
+.naive-card figure img {
+  max-width: $naive-card-figure-max-width;
+  display: block;
+  position: relative;
+  @include transition-transform($naive-card-transition-transform-time);
+}
+
+.naive-card figcaption {
+  position: absolute;
+  left: $naive-card-caption-left;
+  padding: $naive-card-caption-padding;
+  background: $naive-card-caption-background;
+  color: $naive-card-caption-color;
+  height: $naive-card-caption-height;
+  width: $naive-card-max-width;
+  top: auto;
+  bottom: $naive-card-caption-bottom;
+  opacity: $naive-card-caption-opacity;
+  @include transform(translateY(100%));
+  @include transition-transform($naive-card-transition-transform-time, $naive-card-transition-opacity-time, $naive-card-transition-opacity-delay);
+}
+
+.naive-card figcaption .title {
+  display: block;
+  margin: $naive-card-title-margin;
+  padding: $naive-card-title-padding;
+  color: $naive-card-title-color;
+  font-size: 1.5rem;
+}
+
+.naive-card figcaption .subtitle {
+  color: $naive-card-subtitle-color;
+  display: block;
+}
+
+.naive-card figcaption .footer-left {
+  display: inline-block;
+  position: absolute;
+  left: $naive-card-footer-left-left;
+
+  .icon {
+    color: $naive-card-footer-left-icon-color;
+  }
+}
+
+.naive-card figcaption .footer-right{
+  display: inline-block;
+  position: absolute;
+  right: $naive-card-footer-right-right;
+}
+
+
+.naive-card figcaption a {
+  text-align: center;
+  padding: $naive-card-a-padding;
+  display: inline-block;
+  background: $naive-card-a-background;
+  color: $naive-card-a-color;
+  position: absolute;
+  bottom: $naive-card-a-bottom;
+  right: $naive-card-a-right;
+}
+
+
+.no-touch .naive-card figure:hover img,
+.naive-card figure.cs-hover img {
+  @include transform(translateY(-$naive-card-caption-height));
+}
+
+
+.no-touch .naive-card figure:hover figcaption,
+.naive-card figure.cs-hover figcaption {
+  opacity: 1;
+  @include transform(translateY(0px));
+  @include transition-transform($naive-card-transition-transform-time, $naive-card-transition-opacity-time);
+}
+
+.naive-card .pull-content-right {
+  position: absolute;
+  right: $naive-card-caption-padding;
+}
+
+.naive-card .pull-content-left {
+  position: absolute;
+  left: $naive-card-caption-padding;
+}
+
