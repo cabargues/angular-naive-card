@@ -49,31 +49,9 @@
   color: white;
   font-size: 1.5rem; }
 
-.naive-card figcaption .subtitle {
-  color: #212121;
+.naive-card figcaption .content {
+  color: #cccccc;
   display: block; }
-
-.naive-card figcaption .footer-left {
-  display: inline-block;
-  position: absolute;
-  left: 20px; }
-  .naive-card figcaption .footer-left .icon {
-    color: #b65d69; }
-
-.naive-card figcaption .footer-right {
-  display: inline-block;
-  position: absolute;
-  right: 20px; }
-
-.naive-card figcaption a {
-  text-align: center;
-  padding: 5px 10px;
-  display: inline-block;
-  background: #2ab8cb;
-  color: white;
-  position: absolute;
-  bottom: 20px;
-  right: 20px; }
 
 .no-touch .naive-card figure:hover img,
 .naive-card figure.cs-hover img {
@@ -92,11 +70,3 @@
   -webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
   -moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s;
   transition: transform 0.4s, opacity 0.1s 0.3s; }
-
-.naive-card .pull-content-right {
-  position: absolute;
-  right: 20px; }
-
-.naive-card .pull-content-left {
-  position: absolute;
-  left: 20px; }

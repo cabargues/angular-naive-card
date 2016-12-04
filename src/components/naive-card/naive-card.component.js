@@ -7,14 +7,25 @@
 (function () {
   'use strict';
 
-  angular.module('cabargues.naive-card')
-    .component('naive-card', {
-      template: ['$templateCache', function($templateCache) {
-        return $templateCache.get('components/card/naive-card.tmpl.html');
-      }],
+  angular.module('cabargues.naiveCard', [])
+    .component('naiveCard', {
       bindings: {
         data: '<'
-      }
+      },
+      template: '' +
+      '<div class="naive-card"> ' +
+      '<div class="naive-card-container"> ' +
+      '<figure> ' +
+      '<a href="{{$ctrl.data.link}}">' +
+      '<img class="card-img-top img-responsive" ng-src="{{$ctrl.data.img}}" alt="Book cover">' +
+      '</a>  ' +
+      '<figcaption> ' +
+      '<span class="title">{{::$ctrl.data.title}}</span> ' +
+      '<span class="content">{{::$ctrl.data.content}}</span> ' +
+      '</figcaption> ' +
+      '</figure> ' +
+      '</div> ' +
+      '</div>'
     });
 
 })();

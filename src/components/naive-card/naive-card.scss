@@ -1,6 +1,5 @@
 // Contains all the styling for naive-card component
 
-
 // Container
 $naive-card-max-width: 100% !default;
 $naive-card-margins: 5px !default;
@@ -21,22 +20,8 @@ $naive-card-title-margin: 0 !default;
 $naive-card-title-padding: 0 !default;
 $naive-card-title-color: hsl(0, 0%, 100%) !default;
 
-// Author
-$naive-card-subtitle-color: hsl(0, 0%, 13%) !default;
-
-// footer-left
-$naive-card-footer-left-left: 20px !default;
-$naive-card-footer-left-icon-color: hsl(352, 38%, 54%) !default;
-
-// Published
-$naive-card-footer-right-right: 20px !default;
-
-// Button
-$naive-card-a-padding: 5px 10px !default;
-$naive-card-a-background: hsl(187, 66%, 48%) !default;
-$naive-card-a-color: hsl(0, 0%, 100%) !default;
-$naive-card-a-bottom: 20px !default;
-$naive-card-a-right: 20px !default;
+// Content
+$naive-card-content-color: hsl(0, 0%, 80%) !default;
 
 // Transitions
 $naive-card-transition-transform-time: 0.4s !default;
@@ -129,37 +114,9 @@ $naive-card-transition-opacity-delay: 0.3s !default;
   font-size: 1.5rem;
 }
 
-.naive-card figcaption .subtitle {
-  color: $naive-card-subtitle-color;
+.naive-card figcaption .content {
+  color: $naive-card-content-color;
   display: block;
-}
-
-.naive-card figcaption .footer-left {
-  display: inline-block;
-  position: absolute;
-  left: $naive-card-footer-left-left;
-
-  .icon {
-    color: $naive-card-footer-left-icon-color;
-  }
-}
-
-.naive-card figcaption .footer-right{
-  display: inline-block;
-  position: absolute;
-  right: $naive-card-footer-right-right;
-}
-
-
-.naive-card figcaption a {
-  text-align: center;
-  padding: $naive-card-a-padding;
-  display: inline-block;
-  background: $naive-card-a-background;
-  color: $naive-card-a-color;
-  position: absolute;
-  bottom: $naive-card-a-bottom;
-  right: $naive-card-a-right;
 }
 
 
@@ -176,13 +133,4 @@ $naive-card-transition-opacity-delay: 0.3s !default;
   @include transition-transform($naive-card-transition-transform-time, $naive-card-transition-opacity-time);
 }
 
-.naive-card .pull-content-right {
-  position: absolute;
-  right: $naive-card-caption-padding;
-}
-
-.naive-card .pull-content-left {
-  position: absolute;
-  left: $naive-card-caption-padding;
-}
 

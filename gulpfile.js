@@ -2,11 +2,11 @@
  * Created by cabargues on 2/12/16.
  */
 var gulp = require('gulp'),
-  addStream = require('add-stream'),
   sass = require('gulp-sass'),
-  angularTemplateCache = require('gulp-angular-templatecache'),
-  plugins = require('gulp-load-plugins')();
+  plugins = require('gulp-load-plugins')()
+  gutil = require('gulp-util')
   config = require('./build.conf.js')
+
 
 ;
 
@@ -52,14 +52,6 @@ gulp.task('jshint', function() {
 });
 
 
-function prepareTemplates() {
-  return gulp.src(config.srcHtml)
-  //.pipe(minify and preprocess the template html here)
-    .pipe(angularTemplateCache());
-}
-
-
-
 
 /////////////////////////////////////////////////////////////////////////////////////
 //
@@ -72,13 +64,8 @@ gulp.task('build-js', ['clean'], function() {
 
   return gulp.src(config.srcJs)
 
-    // template Cache
-    .pipe(addStream.obj(prepareTemplates()))
-
     // package
     .pipe(plugins.concat(config.buildJsFilename))
-    // .pipe(plugins.header(config.closureStart))
-    // .pipe(plugins.footer(config.closureEnd))
     .pipe(plugins.header(config.banner))
     .pipe(gulp.dest(config.buildFolder))
     .pipe(plugins.filesize())
@@ -99,7 +86,4 @@ gulp.task('build-js', ['clean'], function() {
 /////////////////////////////////////////////////////////////////////////////////////
 
 gulp.task('build', [ 'clean', 'build-css', 'jshint', 'build-js'], function() {
-  // return gulp.src('index.html')
-  //   .pipe(cachebust.references())
-  //   .pipe(gulp.dest('dist'));
 });
