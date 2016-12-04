@@ -31,12 +31,12 @@ npm install angular-naive-card
   <div naiveCard data=data></span>
   ```
 The expected data structure is the following:
- ```json
+ ```javascript
  data = {
-  title: <title shown in the card>,
-  content: <content to shown below the title>
-  img: <image to show>
-  url: <url to redirect the user on image click>
+  title: 'title shown in the card',
+  content: 'content to shown below the title',
+  img: 'image to show',
+  url: 'url to redirect the user on image click'
  }
  
  ```
