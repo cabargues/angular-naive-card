@@ -5,6 +5,7 @@
   "authors": [
     "cabargues <carlos.abargues@gmail.com>"
   ],
+  "private": "false",
   "license": "MIT",
   "homepage": "https://www.github.com/cabargues/angular-naive-card",
   "main": "./dist/angular-naive-card.js",
