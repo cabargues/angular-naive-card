@@ -1,5 +1,7 @@
-angular-naive-card
+angular-naive-card 
 =======
+
+[![Build Status](https://travis-ci.org/cabargues/angular-naive-card.svg?branch=master)](https://travis-ci.org/cabargues/angular-naive-card)
 
 Super simple angular component to show data in a card.
 
