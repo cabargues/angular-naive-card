@@ -16,8 +16,8 @@
       '<div class="naive-card"> ' +
       '<div class="naive-card-container"> ' +
       '<figure> ' +
-      '<a href="{{$ctrl.data.link}}">' +
-      '<img class="card-img-top img-responsive" ng-src="{{$ctrl.data.img}}" alt="Book cover">' +
+      '<a href="{{::$ctrl.data.url}}">' +
+      '<img class="card-img-top img-responsive" ng-src="{{::$ctrl.data.img}}" alt="Book cover">' +
       '</a>  ' +
       '<figcaption> ' +
       '<span class="title">{{::$ctrl.data.title}}</span> ' +
