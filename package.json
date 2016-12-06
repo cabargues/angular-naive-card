@@ -1,6 +1,6 @@
 {
   "name": "angular-naive-card",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Super simple angular component to show data in a card",
   "main": "./dist/angular-naive-card.js",
   "repository": {
